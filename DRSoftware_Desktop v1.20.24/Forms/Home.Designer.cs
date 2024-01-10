@@ -83,6 +83,9 @@
             this.InventoryPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.CustomerPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.IconList = new System.Windows.Forms.ImageList(this.components);
+            this.radCallout1 = new Telerik.WinControls.UI.RadCallout();
+            this.radButtonTextBox1 = new Telerik.WinControls.UI.RadButtonTextBox();
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radTitleBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radApplicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenuComboItem7.ComboBoxElement)).BeginInit();
@@ -98,6 +101,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NavigationView)).BeginInit();
             this.NavigationView.SuspendLayout();
             this.POSPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonTextBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // radTitleBar1
@@ -353,6 +358,7 @@
             this.radLabelElement1.Text = "تجربة المنيو السفلية";
             this.radLabelElement1.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabelElement1.TextWrap = true;
+            this.radLabelElement1.ToolTipText = "gfhdghgf";
             // 
             // commandBarSeparator1
             // 
@@ -710,6 +716,8 @@
             // POSPage
             // 
             this.POSPage.AutoScroll = true;
+            this.POSPage.Controls.Add(this.radButton1);
+            this.POSPage.Controls.Add(this.radButtonTextBox1);
             this.POSPage.Controls.Add(this.radApplicationMenu1);
             this.POSPage.Cursor = System.Windows.Forms.Cursors.Default;
             this.POSPage.Description = "وصف نقاط البيع";
@@ -721,6 +729,7 @@
             this.POSPage.Text = "نقاط البيع";
             this.POSPage.Title = "معلومات";
             this.POSPage.ToolTipText = "عمليات البيع";
+            this.POSPage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.POSPage_MouseDown);
             // 
             // InventoryPage
             // 
@@ -770,6 +779,29 @@
             this.IconList.Images.SetKeyName(16, "round_error_black_24dp.png");
             this.IconList.Images.SetKeyName(17, "round_event_black_24dp.png");
             // 
+            // radCallout1
+            // 
+            this.radCallout1.AssociatedControl = this.radButtonTextBox1;
+            this.radCallout1.ThemeName = "Windows11";
+            // 
+            // radButtonTextBox1
+            // 
+            this.radButtonTextBox1.Location = new System.Drawing.Point(555, 164);
+            this.radButtonTextBox1.Name = "radButtonTextBox1";
+            this.radButtonTextBox1.Size = new System.Drawing.Size(258, 24);
+            this.radButtonTextBox1.TabIndex = 2;
+            this.radButtonTextBox1.Text = "radButtonTextBox1";
+            this.radButtonTextBox1.TextChanged += new System.EventHandler(this.radButtonTextBox1_TextChanged);
+            // 
+            // radButton1
+            // 
+            this.radButton1.Location = new System.Drawing.Point(361, 74);
+            this.radButton1.Name = "radButton1";
+            this.radButton1.Size = new System.Drawing.Size(110, 24);
+            this.radButton1.TabIndex = 3;
+            this.radButton1.Text = "radButton1";
+            this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -801,6 +833,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.NavigationView)).EndInit();
             this.NavigationView.ResumeLayout(false);
             this.POSPage.ResumeLayout(false);
+            this.POSPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonTextBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -861,5 +896,8 @@
         private Telerik.WinControls.UI.RadMenuItem radMenuItem9;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem10;
         private System.Windows.Forms.ImageList IconList;
+        private Telerik.WinControls.UI.RadCallout radCallout1;
+        private Telerik.WinControls.UI.RadButtonTextBox radButtonTextBox1;
+        private Telerik.WinControls.UI.RadButton radButton1;
     }
 }

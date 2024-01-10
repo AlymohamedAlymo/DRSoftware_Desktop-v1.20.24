@@ -14,5 +14,22 @@ namespace DRSoftware_Desktop_v1._20._24.Forms
         {
             InitializeComponent();
         }
+
+        private void POSPage_MouseDown(object sender, MouseEventArgs e)
+        {
+            //radCallout1.Show(POSPage.Location);
+        }
+
+        private void radButtonTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            radCallout1.Show(radButtonTextBox1.Location);
+
+        }
+
+        private void radButton1_Click(object sender, EventArgs e)
+        {
+            radCallout1.Show(radButton1.Location);
+
+        }
     }
 }
